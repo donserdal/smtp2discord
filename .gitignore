@@ -6,3 +6,5 @@ vendor
 # go executable built file
 smtp2http
 smtp2http.exe
+smtp2discord
+smtp2discord.exe

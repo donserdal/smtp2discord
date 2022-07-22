@@ -42,6 +42,21 @@ Docker (production)
 **See "Dev with Docker" above**
 - `docker run -p 25:25 smtp2discord --webhook=http://some.hook/api`
 
+Docker Compose
+=====
+```
+version: '3.1'
+services:
+  smtp2discord:
+    container_name: smtp2discord
+    image: donserdal/smtp2discord
+    command: ' -webhook https://discord.com/api/webhooks/<ID>/<Pass>'
+    ports:
+      - '25:25'
+    restart: unless-stopped
+```
+
+
 Native usage
 =====
 `smtp2discord --listen=:25 --webhook=http://localhost:8080/api/smtp-hook`

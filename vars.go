@@ -5,6 +5,8 @@ import "flag"
 var (
 	flagServerName     = flag.String("name", "smtp2http", "the server name")
 	flagListenAddr     = flag.String("listen", ":smtp", "the smtp address to listen on")
+	flagAuthor         = flag.String("author", "", "The username for the discord webhook")
+	flagAvatarURL      = flag.String("AvatarURL", "", "The Avatar URL of the bot")
 	flagWebhook        = flag.String("webhook", "http://localhost:8080/my/webhook", "the webhook to send the data to")
 	flagMaxMessageSize = flag.Int64("msglimit", 1024*1024*2, "maximum incoming message size")
 	flagReadTimeout    = flag.Int("timeout.read", 5, "the read timeout in seconds")

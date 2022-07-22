@@ -24,8 +24,8 @@ func main() {
 			}
 
 			jsonDiscord := DiscordJson{
-				AvatarURL: string("https://avatars.githubusercontent.com/u/3466759?v=4"),
-				Username:  string("SMTP2Discord"),
+				AvatarURL: *flagAvatarURL,
+				Username:  *flagAuthor,
 				Content:   msg.TextBody,
 			}
 
